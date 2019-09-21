@@ -24,6 +24,10 @@
           flavor: this.elements.flavor.value,
           strength: this.elements.strength.value
         };
+        $("#appended").remove();
+        $("#ex1").append("<p id='appended'>Thank you for your payment" + data.email + "</p>");
+        $("#ex1").modal();
+
         fn(data);
         this.reset();
         this.elements[0].focus();
