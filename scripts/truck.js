@@ -1,18 +1,18 @@
-(function(window){
+(function(window) {
   "use strict";
 
   var App = window.App || {};
 
-  function Truck(truckId, db){
+  function Truck(truckId, db) {
     this.truckId = truckId;
     this.db = db;
   }
 
-  Truck.prototype.createOrder = function(order){
+  Truck.prototype.createOrder = function(order) {
     this.db.add(order.email, order);
   };
 
-  Truck.prototype.deliverOrder = function(customerId){
+  Truck.prototype.deliverOrder = function(customerId) {
     this.db.remove(customerId);
   };
 
